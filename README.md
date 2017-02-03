@@ -3,12 +3,12 @@ Google Api Client Wrapper
 
 > Google api php client wrapper with Cloud Platform and Laravel 4 & 5 support
 
-[![Build Status](http://img.shields.io/travis/pulkitjalan/google-apiclient.svg?style=flat-square)](https://travis-ci.org/pulkitjalan/google-apiclient)
-[![Scrutinizer Code Quality](http://img.shields.io/scrutinizer/g/pulkitjalan/google-apiclient/master.svg?style=flat-square)](https://scrutinizer-ci.com/g/pulkitjalan/google-apiclient/)
-[![Coverage Status](https://img.shields.io/scrutinizer/coverage/g/pulkitjalan/google-apiclient/master.svg?style=flat-square)](https://scrutinizer-ci.com/g/pulkitjalan/google-apiclient/code-structure/master)
+[![Build Status](http://img.shields.io/travis/pmmotors/google-apiclient.svg?style=flat-square)](https://travis-ci.org/pmmotors/google-apiclient)
+[![Scrutinizer Code Quality](http://img.shields.io/scrutinizer/g/pmmotors/google-apiclient/master.svg?style=flat-square)](https://scrutinizer-ci.com/g/pmmotors/google-apiclient/)
+[![Coverage Status](https://img.shields.io/scrutinizer/coverage/g/pmmotors/google-apiclient/master.svg?style=flat-square)](https://scrutinizer-ci.com/g/pmmotors/google-apiclient/code-structure/master)
 [![License](http://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](http://www.opensource.org/licenses/MIT)
-[![Latest Version](http://img.shields.io/packagist/v/pulkitjalan/google-apiclient.svg?style=flat-square)](https://packagist.org/packages/pulkitjalan/google-apiclient)
-[![Total Downloads](https://img.shields.io/packagist/dt/pulkitjalan/google-apiclient.svg?style=flat-square)](https://packagist.org/packages/pulkitjalan/google-apiclient)
+[![Latest Version](http://img.shields.io/packagist/v/pmmotors/google-apiclient.svg?style=flat-square)](https://packagist.org/packages/pmmotors/google-apiclient)
+[![Total Downloads](https://img.shields.io/packagist/dt/pmmotors/google-apiclient.svg?style=flat-square)](https://packagist.org/packages/pmmotors/google-apiclient)
 
 ## Requirements
 
@@ -20,33 +20,33 @@ Install via composer - edit your `composer.json` to require the package.
 
 ```js
 "require": {
-    "pulkitjalan/google-apiclient": "3.*"
+    "pmmotors/google-apiclient": "3.*"
 }
 ```
 
 Then run `composer update` in your terminal to pull it in.
 
-Or use `composer require pulkitjalan/google-apiclient`
+Or use `composer require pmmotors/google-apiclient`
 
 ## Laravel
 
 To use in laravel add the following to the `providers` array in your `config/app.php`
 
 ```php
-PulkitJalan\Google\GoogleServiceProvider::class
+PmMotors\Google\GoogleServiceProvider::class
 ```
 
 Next add the following to the `aliases` array in your `config/app.php`
 
 ```php
-'Google' => PulkitJalan\Google\Facades\Google::class
+'Google' => PmMotors\Google\Facades\Google::class
 ```
 
-Finally run `php artisan vendor:publish --provider="PulkitJalan\Google\GoogleServiceProvider" --tag="config"` to publish the config file.
+Finally run `php artisan vendor:publish --provider="PmMotors\Google\GoogleServiceProvider" --tag="config"` to publish the config file.
 
 #### Looking for a Laravel 4 compatible version?
 
-Checkout the [1.0 branch](https://github.com/pulkitjalan/google-apiclient/tree/1.0)
+Checkout the [1.0 branch](https://github.com/pmmotors/google-apiclient/tree/1.0)
 
 ## Usage
 
@@ -121,7 +121,7 @@ From [Google's upgrading document](https://github.com/google/google-api-php-clie
 
 Get `Google_Client`
 ```php
-$client = new PulkitJalan\Google\Client($config);
+$client = new PmMotors\Google\Client($config);
 $googleClient = $client->getClient();
 ```
 
@@ -132,7 +132,7 @@ $googleClient = Google::getClient();
 
 Get a service
 ```php
-$client = new PulkitJalan\Google\Client($config);
+$client = new PmMotors\Google\Client($config);
 
 // returns instance of \Google_Service_Storage
 $storage = $client->make('storage');

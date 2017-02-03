@@ -1,9 +1,9 @@
 <?php
 
-namespace PulkitJalan\Google\Facades;
+namespace PmMotors\Google\Facades;
 
 use Illuminate\Support\Facades\Facade;
-use PulkitJalan\Google\Client;
+use PmMotors\Google\Client;
 
 class Google extends Facade
 {

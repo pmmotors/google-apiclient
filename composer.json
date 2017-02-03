@@ -4,6 +4,7 @@
     "homepage": "https://github.com/pulkitjalan/google-apiclient",
     "keywords": ["laravel", "google", "cloud platform"],
     "license": "MIT",
+    "minimum-stability": "dev",
     "authors": [
         {
             "name": "Pulkit Jalan"

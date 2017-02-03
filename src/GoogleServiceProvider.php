@@ -1,6 +1,6 @@
 <?php
 
-namespace PulkitJalan\Google;
+namespace PmMotors\Google;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -34,7 +34,7 @@ class GoogleServiceProvider extends ServiceProvider
     {
         $this->mergeConfigFrom(__DIR__.'/config/config.php', 'google');
 
-        $this->app->singleton('PulkitJalan\Google\Client', function ($app) {
+        $this->app->singleton('PmMotors\Google\Client', function ($app) {
             return new Client($app['config']['google']);
         });
     }
@@ -46,6 +46,6 @@ class GoogleServiceProvider extends ServiceProvider
      */
     public function provides()
     {
-        return ['PulkitJalan\Google\Client'];
+        return ['PmMotors\Google\Client'];
     }
 }

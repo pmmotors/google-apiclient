@@ -1,8 +1,8 @@
 <?php
 
-namespace PulkitJalan\Google;
+namespace PmMotors\Google;
 
-use PulkitJalan\Google\Exceptions\UnknownServiceException;
+use PmMotors\Google\Exceptions\UnknownServiceException;
 
 class Client
 {
