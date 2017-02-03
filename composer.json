@@ -1,5 +1,5 @@
 {
-    "name": "pulkitjalan/google-apiclient",
+    "name": "pmmotors/google-apiclient",
     "description": "Google api php client wrapper with Cloud Platform and Laravel 4 & 5 support",
     "homepage": "https://github.com/pulkitjalan/google-apiclient",
     "keywords": ["laravel", "google", "cloud platform"],
