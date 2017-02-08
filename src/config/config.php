@@ -20,10 +20,10 @@ return [
     'client_id'       => env('GOOGLE_CLIENT_ID', ''),
     'client_secret'   => env('GOOGLE_CLIENT_SECRET', ''),
     'redirect_uri'    => env('GOOGLE_REDIRECT', ''),
-    'scopes'          => [],
-    'access_type'     => 'online',
+    'scopes'          => array('https://www.googleapis.com/auth/analytics.readonly'), //[],
+    'access_type'     => 'offline', //'online',
     'approval_prompt' => 'auto',
-
+    'refresh_token'   => env('GOOGLE_REFRESH_TOKEN', ''),
     /*
     |----------------------------------------------------------------------------
     | Google developer key
