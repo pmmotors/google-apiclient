@@ -3,13 +3,6 @@ Google Api Client Wrapper
 
 > Google api php client wrapper with Cloud Platform and Laravel 4 & 5 support
 
-[![Build Status](http://img.shields.io/travis/pmmotors/google-apiclient.svg?style=flat-square)](https://travis-ci.org/pmmotors/google-apiclient)
-[![Scrutinizer Code Quality](http://img.shields.io/scrutinizer/g/pmmotors/google-apiclient/master.svg?style=flat-square)](https://scrutinizer-ci.com/g/pmmotors/google-apiclient/)
-[![Coverage Status](https://img.shields.io/scrutinizer/coverage/g/pmmotors/google-apiclient/master.svg?style=flat-square)](https://scrutinizer-ci.com/g/pmmotors/google-apiclient/code-structure/master)
-[![License](http://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](http://www.opensource.org/licenses/MIT)
-[![Latest Version](http://img.shields.io/packagist/v/pmmotors/google-apiclient.svg?style=flat-square)](https://packagist.org/packages/pmmotors/google-apiclient)
-[![Total Downloads](https://img.shields.io/packagist/dt/pmmotors/google-apiclient.svg?style=flat-square)](https://packagist.org/packages/pmmotors/google-apiclient)
-
 ## Requirements
 
 This package requires PHP >=5.4
