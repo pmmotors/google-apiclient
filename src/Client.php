@@ -34,12 +34,14 @@ class Client
         $this->client->setClientId(array_get($config, 'client_id', ''));
         $this->client->setClientSecret(array_get($config, 'client_secret', ''));
         $this->client->setRedirectUri(array_get($config, 'redirect_uri', ''));
+        $this->client->setDeveloperKey(array_get($config, 'developer_key', ''));
         $this->client->setScopes(array_get($config, 'scopes', []));
         $this->client->setAccessType(array_get($config, 'access_type', 'online'));
-        $this->client->setApprovalPrompt(array_get($config, 'approval_prompt', 'auto'));
+        $this->client->refreshToken(array_get($config, 'refresh_token', ''));
+        //$this->client->setApprovalPrompt(array_get($config, 'approval_prompt', 'auto'));
 
         // set developer key
-        $this->client->setDeveloperKey(array_get($config, 'developer_key', ''));
+        //moved^^$this->client->setDeveloperKey(array_get($config, 'developer_key', ''));
 
         // auth for service account
         if (array_get($config, 'service.enable', false)) {
