@@ -46,13 +46,15 @@ Checkout the [1.0 branch](https://github.com/pmmotors/google-apiclient/tree/1.0)
 The `Client` class takes an array as the first parameter, see example of config file below:
 
 ```php
+<?php
+
 return [
     /*
     |----------------------------------------------------------------------------
     | Google application name
     |----------------------------------------------------------------------------
     */
-    'application_name' => '',
+    'application_name' => env('GOOGLE_APPLICATION_NAME', ''),
 
     /*
     |----------------------------------------------------------------------------
@@ -63,13 +65,13 @@ return [
     | https://developers.google.com/console
     |
     */
-    'client_id' => '',
-    'client_secret' => '',
-    'redirect_uri' => '',
-    'scopes' => [],
-    'access_type' => 'online',
+    'client_id'       => env('GOOGLE_CLIENT_ID', ''),
+    'client_secret'   => env('GOOGLE_CLIENT_SECRET', ''),
+    'redirect_uri'    => env('GOOGLE_REDIRECT', ''),
+    'scopes'          => array('https://www.googleapis.com/auth/analytics.readonly'), //[],
+    'access_type'     => 'offline', //'online',
     'approval_prompt' => 'auto',
-
+    'refresh_token'   => env('GOOGLE_REFRESH_TOKEN', ''),
     /*
     |----------------------------------------------------------------------------
     | Google developer key
@@ -79,7 +81,7 @@ return [
     | a Server key, and not a Browser key.
     |
     */
-    'developer_key' => '',
+    'developer_key' => env('GOOGLE_DEVELOPER_KEY', ''),
 
     /*
     |----------------------------------------------------------------------------
@@ -90,18 +92,19 @@ return [
     | app engine or compute engine will be used.
     |
     */
-    'service' =>  [
+    'service' => [
         /*
         | Enable service account auth or not.
         */
-        'enabled' => false,
+        'enable' => env('GOOGLE_SERVICE_ENABLED', false),
 
         /*
         | Path to service account json file
         */
-        'file' => '',
+        'file' => env('GOOGLE_SERVICE_ACCOUNT_JSON_LOCATION', '')
     ],
 ];
+
 
 ```
 
