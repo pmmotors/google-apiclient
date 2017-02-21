@@ -18,7 +18,7 @@ class GoogleServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->app['PulkitJalan\Google\Client'] = function ($app) {
+        $this->app['PmMotors\Google\Client'] = function ($app) {
             return $app['google.api.client'];
         };
 
@@ -48,6 +48,6 @@ class GoogleServiceProvider extends ServiceProvider
      */
     public function provides()
     {
-        return ['google.api.client', 'PulkitJalan\Google\Client'];
+        return ['google.api.client', 'PmMotors\Google\Client'];
     }
 }
