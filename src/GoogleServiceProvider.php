@@ -1,9 +1,6 @@
 <?php
-
 namespace PmMotors\Google;
-
 use Illuminate\Support\ServiceProvider;
-
 class GoogleServiceProvider extends ServiceProvider
 {
     /**
@@ -12,21 +9,17 @@ class GoogleServiceProvider extends ServiceProvider
      * @var bool
      */
     protected $defer = false;
-
     /**
      * Boot the service provider.
      */
     public function boot()
     {
-        $this->app['PmMotors\Google\Client'] = function ($app) {
-            return $app['google.api.client'];
-        };
-
-        $this->publishes([
-            __DIR__.'/config/config.php' => config_path('google.php'),
-        ], 'config');
+        if (function_exists('config_path')) {
+            $this->publishes([
+                __DIR__.'/config/config.php' => config_path('google.php'),
+            ], 'config');
+        }
     }
-
     /**
      * Register the service provider.
      *
@@ -35,12 +28,10 @@ class GoogleServiceProvider extends ServiceProvider
     public function register()
     {
         $this->mergeConfigFrom(__DIR__.'/config/config.php', 'google');
-
-        $this->app['google.api.client'] = $this->app->share(function () {
-            return new Client(config('google'));
+        $this->app->singleton('PmMotors\Google\Client', function ($app) {
+            return new Client($app['config']['google']);
         });
     }
-
     /**
      * Get the services provided by the provider.
      *
@@ -48,6 +39,6 @@ class GoogleServiceProvider extends ServiceProvider
      */
     public function provides()
     {
-        return ['google.api.client', 'PmMotors\Google\Client'];
+        return ['PmMotors\Google\Client'];
     }
 }
