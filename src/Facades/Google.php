@@ -14,6 +14,6 @@ class Google extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'google.api.client';
+		return Client::class;
     }
 }

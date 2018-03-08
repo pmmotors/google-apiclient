@@ -26,6 +26,14 @@
     "extra": {
         "branch-alias": {
             "dev-master": "3.0.x-dev"
+        },
+        "laravel": {
+            "providers": [
+                "PmMotors\\Google\\GoogleServiceProvider"
+            ],
+            "aliases": {
+                "Google": "PmMotors\\Google\\Facades\\Google"
+            }
         }
     },
     "minimum-stability": "dev",
